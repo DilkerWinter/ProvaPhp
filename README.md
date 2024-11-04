@@ -1,12 +1,26 @@
-# ProvaPhp
+# Biblioteca Pessoal
+
+## 📖 Resumo
+
+Este é um aplicativo de biblioteca pessoal que permite aos usuários armazenar e organizar os livros que possuem. Os usuários podem criar novos registros de livros, editar informações existentes ou deletar livros da sua coleção.
+Funcionalidades
+
+ - Cadastro de Livros: Adicione novos livros à sua biblioteca informando o título, autor e uma foto da capa.
+ - Organização: Mantenha seus livros organizados com opções para adicionar, editar e deletar.
+ - Avaliações e Comentários: Avalie seus livros com notas e deixe comentários sobre suas leituras.
+ - Status de Leitura: Informe se o livro foi finalizado, facilitando o acompanhamento das suas leituras.
 
 
-## 📖 Descrição
+
+## 📖 Descrição Técnica
+
+Tecnologias utilizadas no projeto
+
 - Projeto Full Stack, utilizando PHP para Back End, Angular para Front End.
 - Implementação de uma API em PHP.
 - Criação de um website para acesso às funcionalidades.
 - Desenvolvimento de uma interface para criar, alterar, deletar e visualizar.
-- Extras: Utilização de Tailwind CSS para estilização.Show Diff
+- Extras: Utilização de Tailwind CSS para estilização.
 
 
 
