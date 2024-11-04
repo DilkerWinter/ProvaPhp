@@ -9,8 +9,6 @@ class Router {
 
     public function dispatch($requestedPath) {
         $method = $_SERVER['REQUEST_METHOD'];
-        echo "Requested Method: $method\n";
-        echo "Requested Path: $requestedPath\n";
     
         foreach ($this->routes as $route) {
             if ($method === $route['method'] && preg_match($this->convertToRegex($route['path']), $requestedPath, $matches)) {
