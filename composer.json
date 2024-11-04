@@ -1,0 +1,17 @@
+{
+    "name": "winter/prova-php",
+    "autoload": {
+        "psr-4": {
+            "Winter\\ProvaPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Winter",
+            "email": "brunohdwinter@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}

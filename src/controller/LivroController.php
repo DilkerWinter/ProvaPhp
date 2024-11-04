@@ -1,5 +1,5 @@
 <?php
-require_once '../model/Livro.php';
+require_once __DIR__ . '/../model/Livro.php';
 
 class LivroController
 {
@@ -56,29 +56,29 @@ class LivroController
         }
     }
 
-    public function update($id)
-    {
-        $data = json_decode(file_get_contents("php://input"));
-        if (isset($id) && isset($data->titulo) && isset($data->autor) && isset($data->descricao) && isset($data->imagemUrl) && isset($data->finalizado) && isset($data->nota)) {
-            try {
-                $count = $this->livro->update($id, $data->titulo, $data->autor, $data->descricao, $data->imagemUrl, $data->finalizado, $data->nota);
-                if ($count > 0) {
-                    http_response_code(200);
-                    echo json_encode(["message" => "Livro atualizado com sucesso."]);
-                } else {
-                    http_response_code(500);
-                    echo json_encode(["message" => "Erro ao atualizar o livro."]);
-                }
-            } catch (\Throwable $th) {
+public function update($id)
+{
+    $data = json_decode(file_get_contents("php://input"));
+    if (isset($id) && isset($data->titulo) && isset($data->autor) && isset($data->descricao) && isset($data->imagemUrl) && isset($data->finalizado) && isset($data->nota)) {
+        try {
+            $count = $this->livro->update($id, $data->titulo, $data->autor, $data->descricao, $data->imagemUrl, $data->finalizado, $data->nota);
+            if ($count > 0) {
+                http_response_code(200);
+                echo json_encode(["message" => "Livro atualizado com sucesso."]);
+            } else {
                 http_response_code(500);
                 echo json_encode(["message" => "Erro ao atualizar o livro."]);
             }
-        } else {
-            http_response_code(400);
-            echo json_encode(["message" => "Dados incompletos."]);
+        } catch (\Throwable $th) {
+            http_response_code(500);
+            echo json_encode(["message" => "Erro ao atualizar o livro."]);
         }
+    } else {
+        http_response_code(400);
+        echo json_encode(["message" => "Dados incompletos."]);
     }
-    
+}
+
 
     public function delete($id)
     {

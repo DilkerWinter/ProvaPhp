@@ -1,7 +1,9 @@
 <?php
-require_once '../config/config.php';
-require_once '../controller/LivroController.php';
-require_once '../Router.php';
+
+require __DIR__ . '/../vendor/autoload.php'; 
+require_once __DIR__ . '/../src/config/config.php'; 
+require_once __DIR__ . '/../src/controller/LivroController.php'; 
+require_once __DIR__ . '/../src/Router.php'; 
 
 header("Content-type: application/json; charset=UTF-8");
 
