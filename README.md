@@ -6,7 +6,8 @@
 - Implementação de uma API em PHP.
 - Criação de um website para acesso às funcionalidades.
 - Desenvolvimento de uma interface para criar, alterar, deletar e visualizar.
-- Extras: Utilização de Tailwind CSS para estilização.
+- Extras: Utilização de Tailwind CSS para estilização.Show Diff
+
 
 
 ## 🤖 Tecnologias
